@@ -159,7 +159,7 @@ export default {
 
     this.dropzone.on("error", function(file, message, xhr) {
       vm.$emit("vdropzone-error", file, message, xhr);
-      if (this.isS3) vm.$emit("vdropzone-s3-upload-error");
+      if (vm.isS3) vm.$emit("vdropzone-s3-upload-error");
     });
 
     this.dropzone.on("errormultiple", function(files, message, xhr) {
