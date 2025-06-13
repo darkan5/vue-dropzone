@@ -9,6 +9,7 @@ import methods from './pages/Methods.vue'
 import s3upload from './pages/UploadToAWSS3.vue'
 import customPreview from './pages/customPreviewDemo.vue'
 import customHtml from './pages/CustomHtml.vue'
+import DarkThemeDemo from './pages/DarkThemeDemo.vue';
 
 export default [
   { path: '/installation', component: Installation },
@@ -22,5 +23,6 @@ export default [
   { path: '/manual', component: manual },
   { path: '/additionalParams', component: additionalParams },
   { path: '/aws-s3-upload', component: s3upload },
+  { path: '/dark-theme', name: 'DarkThemeDemo', component: DarkThemeDemo },
   { path: '*', redirect: '/installation' }
 ]

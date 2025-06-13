@@ -59,7 +59,8 @@ export default {
             { to: '/manual', title: 'Manually Load Files' },
             { to: '/additionalParams', title: 'Sending Additional Params' },
             { to: '/custom-preview', title: 'Custom Styling' },
-            { to: '/aws-s3-upload', title: 'AWS S3 Upload' }
+            { to: '/aws-s3-upload', title: 'AWS S3 Upload' },
+            { to: '/dark-theme', title: 'Dark Theme Demo' }
           ]
         }
       ]

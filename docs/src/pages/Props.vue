@@ -3,6 +3,20 @@
     <h1>Props</h1>
     <p>The following props are available for the Vue2-Dropzone component.</p>
     <simple-table :headers="['Prop Name', 'Type', 'Default', 'Description', 'Required']" :rows="props" />
+
+    <h2>Dark Theme</h2>
+    <p>
+      Vue2-Dropzone now supports a dark theme to better integrate with darker application UIs.
+      To enable the dark theme, set the <code>theme</code> prop to <code>'dark'</code>.
+    </p>
+    <p>
+      When <code>theme="dark"</code> is applied, the component will use a darker background, lighter text,
+      and adjusted border colors to match the dark aesthetic.
+    </p>
+    <p>
+      For a live demonstration of the dark theme, please visit the <router-link to="/dark-theme">Dark Theme Demo</router-link> page.
+    </p>
+
     <edit-doc :link="'Props.vue'"></edit-doc>
   </div>
 </template>
@@ -22,6 +36,7 @@ export default {
         ['destroy-dropzone', 'Boolean','True', 'Destroy the dropzone object when the component is destroyed.', 'False'],
         ['duplicate-check','Boolean','False','Check if added file is duplicate, in already dropped files in dropzone','False'],
         ['use-custom-slot','Boolean','False','Use a custom slot for the default message area','False'],
+        ['theme', 'String', "'light'", "Determines the component's color scheme. Can be 'light' or 'dark'.", 'False'],
       ]
     }
   },

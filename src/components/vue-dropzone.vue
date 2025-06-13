@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" ref="dropzoneElement" :class="{ 'vue-dropzone dropzone': includeStyling }">
+  <div :id="id" ref="dropzoneElement" :class="[{ 'vue-dropzone dropzone': includeStyling }, { 'vue-dropzone-dark': theme === 'dark' }]">
     <div v-if="useCustomSlot" class="dz-message">
       <slot>Drop files here to upload</slot>
     </div>
@@ -47,6 +47,13 @@ export default {
       type: Boolean,
       default: false,
       required: false
+    },
+    theme: {
+      type: String,
+      default: 'light',
+      validator: function (value) {
+        return ['light', 'dark'].includes(value)
+      }
     }
   },
   data() {
@@ -540,5 +547,29 @@ export default {
 
 .vue-dropzone > .dz-preview .dz-error-message:after {
   display: none;
+}
+
+/* Dark Theme Styles */
+.vue-dropzone-dark {
+  background-color: #333;
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+.vue-dropzone-dark:hover {
+  background-color: #444;
+}
+
+.vue-dropzone-dark > i {
+  color: #aaa;
+}
+
+.vue-dropzone-dark > .dz-preview .dz-details {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.vue-dropzone-dark > .dz-preview .dz-remove {
+  color: #f0f0f0;
+  border-color: #f0f0f0;
 }
 </style>
